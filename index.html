@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+<label for="ValorA"> A </label>
+<input type="number" id="valorA">
+<br/>
+<label for="ValorB"> B </label>
+<input type="number" id="valorB">
+<br/>
+<label for="ValorC"> C </label>
+<input type="number" id="valorC">
+<br/>
+    </form>
+    <button onclick="Calculas()">Calculas</button>
+    <div id="resultado1"></div>
+    <div id="resultado2"></div>
+    <script>
+function Calculas() {
+    const valorA = Number(document.getElementById("valorA").value);
+    const valorB = Number(document.getElementById("valorB").value);
+    const valorC = Number(document.getElementById("valorC").value);
+    const delta = valorB ** 2 - ((4 * valorA) * valorC);
+    const baskharaUm = (-valorB + Math.sqrt(delta)) / (2 * valorA)
+    const baskharaDois = (-valorB - Math.sqrt(delta)) / (2 * valorA)
+    document.getElementById("resultado1").innerHTML = `${baskharaUm}`
+    document.getElementById("resultado2").innerHTML = `${baskharaDois}`
+}
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
